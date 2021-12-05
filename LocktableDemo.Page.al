@@ -35,6 +35,18 @@ page 70000 "Locktable Demo"
                     ReadCustomerWithLocktable.Run();
                 end;
             }
+            action(Step2)
+            {
+                ApplicationArea = All;
+                Caption = 'Modify Customer 10000';
+
+                trigger OnAction()
+                var
+                    ModifyCustomer10000: Codeunit "Modify Customer 10000";
+                begin
+                    ModifyCustomer10000.Run();
+                end;
+            }
         }
     }
 }
